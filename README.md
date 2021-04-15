@@ -1,10 +1,26 @@
 # Questions Classifier
 
+Classifying questions if they were prepared by expert or not.
+
 ## Files
 
-## Overview
+- [task.pdf](task.pdf): task description
+- [naive_approach.ipynb](naive_approach.ipynb): jupyter notebook that contains a classic ml solutions to given problem
+- [predict.py](predict.py): model prediction wrapper
+- [data/](data/): initial and test data
+- [models/](models/): our pretrained models
+- [output/](output/): output submissions
+
+
+## Overview of the approach
 
 ## Usage
+
+Clone this repository:
+```bash
+git clone https://github.com/SmirnovAlexander/QuestionsClassifier.git
+cd QuestionsClassifier/
+```
 
 In [Dockerfile](./Dockerfile) specify what model you want to use by selecting one from [models](./models) directory, e.g. `tfidfvectorizer__votingclassifier`:
 
