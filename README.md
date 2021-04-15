@@ -15,6 +15,36 @@ Classifying questions if they were prepared by expert or not.
 
 ## Overview of the approach
 
+### Naive
+
+Naive approach consists of tuning several models, that have as input TF-IDF vectors, where tokens are sequences of chars.
+The best score we got there is around `0.78` that was received from `GradientBoostingClassifier`.
+All the training, model saving and outputs generations may be found in [naive_approach.ipynb](naive_approach.ipynb) notebook.
+
+#### ToDo
+- Bagging approaches for combining models
+- Stacking approaches for combining models
+
+### Autoencoder
+
+Autoencoder approach encodes TF-IDF vectors with `char_wb` analyzer.
+After encoding result codes are fitted into simple `LogisticRegression` model with balanced weights.
+We filter a bunch of non-expert sentences to make training process more stable and dataset less imbalanced.
+The best score we got there is around `0.78`.
+
+#### ToDo
+- Use TripletLoss with hard samples mining
+- Use TripletLoss with multiple positive and negative samples and one anchor for more stable training
+- Experiment with architecture and losses (maybe -MSE(anchore, negative) will work better, because it is possible that we don't need clusters) 
+
+All the training, model saving may be found in [auto_encoder_approach.ipynb](auto_encoder_approach.ipynb) notebook.
+
+### Summary
+
+At the end we calculated mean of outputs from `LogisticRegression`, `GradientBoostingClassifier` and Autoencoder approach.
+The score we received is aroun `0.794`.
+
+
 ## Usage
 
 Clone this repository:
