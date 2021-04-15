@@ -5,7 +5,8 @@ Classifying questions if they were prepared by expert or not.
 ## Files
 
 - [task.pdf](task.pdf): task description
-- [naive_approach.ipynb](naive_approach.ipynb): jupyter notebook that contains a classic ml solutions to given problem
+- [naive_approach.ipynb](naive_approach.ipynb): classic ml solutions to given problem
+- [auto_encoder_approach.ipynb](auto_encoder_approach.ipynb): autoencoder solution to given problem
 - [predict.py](predict.py): model prediction wrapper
 - [data/](data/): initial and test data
 - [models/](models/): our pretrained models
