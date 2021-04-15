@@ -29,7 +29,9 @@ questions = pd.read_csv(questions_path, delimiter=";")
 test = pd.read_csv(test_file_path, delimiter=";")
 
 data = pd.merge(questions, test, on="ID")
+
 prediction = gs.predict_proba(list(data["Question"]))[:, 1]
+
 data["prediction"] = prediction
 # data[["ID", "prediction"]].to_csv("./output/tfidfvectorizer__logisticregression.csv", index=False, header=False)
 
