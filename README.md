@@ -45,6 +45,6 @@ Model loading part takes a bit, but once it is loaded making predictions is blaz
 
 ## Team
 
-- Penskaya Taisia
-- Dranoshuk Artem
-- Smirnov Alexander
+- [Penskaya Taisia](https://github.com/TayaPenskaya)
+- [Dranoshuk Artem](https://github.com/Artem531)
+- [Smirnov Alexander](https://github.com/SmirnovAlexander)
